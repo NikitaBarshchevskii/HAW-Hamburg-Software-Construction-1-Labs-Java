@@ -10,3 +10,7 @@ In Lab 1 the task was to create several classes which combined represent an anim
 - Ensured code conformity with prescribed code conventions, promoting readability and clarity.
   
 ![изображение](https://github.com/NikitaBarshchevskii/HAW-Hamburg-Software-Construction-2-Labs-Java/assets/47278408/6df29a63-fa4d-45d3-9438-00fc7e46cacf)
+
+The following image was created using Java graphics tools:
+
+![изображение](https://github.com/NikitaBarshchevskii/HAW-Hamburg-Software-Construction-2-Labs-Java/assets/47278408/6a6ec5d3-a17f-48ad-93fd-5cf2e3f324f1)
