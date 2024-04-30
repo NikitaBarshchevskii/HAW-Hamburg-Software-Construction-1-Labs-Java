@@ -8,4 +8,5 @@ In Lab 1 the task was to create several classes which combined represent an anim
 - Developed a main animal class with a drawAt(int left, int bottom) method to manage drawing of its constituent parts. Each part class has its own drawAt(int left, int bottom) method to render itself.
 - Evaluated the output to ensure alignment with expectations, determining optimal points for combining object components.
 - Ensured code conformity with prescribed code conventions, promoting readability and clarity.
+  
 ![изображение](https://github.com/NikitaBarshchevskii/HAW-Hamburg-Software-Construction-2-Labs-Java/assets/47278408/6df29a63-fa4d-45d3-9438-00fc7e46cacf)
