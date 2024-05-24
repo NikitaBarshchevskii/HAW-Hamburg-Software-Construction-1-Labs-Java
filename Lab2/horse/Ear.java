@@ -1,30 +1,27 @@
 package horse;
 
 import java.awt.Color;
+import java.awt.Point;
 
-public class Ear {
+public class Ear extends HorseBodyPart {
 	private int outerWidth;
 	private int outerHeight;
 	private int innerWidth;
 	private int innerHeight;
-	private int x;
-	private int y;
-	private Color color;
-	
-	public Ear(int outerWidth, int outerHeight, int innerWidth, int innerHeight, int x, int y, Color color) {
+
+	public Ear(int outerWidth, int outerHeight, int innerWidth, int innerHeight, Point point, Color color) {
+		super(point, color);
 		this.outerWidth = outerWidth;
 		this.outerHeight = outerHeight;
 		this.innerWidth = innerWidth;
 		this.innerHeight = innerHeight;
-		this.x = x;
-		this.y = y;
-		this.color = color;
 	}
-	
+
+	@Override
 	public void drawAt() {
 		Drawing.pen().setColor(this.color);
-		Drawing.pen().fillOval(this.x, this.y, outerWidth, outerHeight);
+		Drawing.pen().fillOval(this.point.x, this.point.y, outerWidth, outerHeight);
 		Drawing.pen().setColor(Color.BLACK);
-		Drawing.pen().fillOval(this.x, this.y, innerWidth, innerHeight);
+		Drawing.pen().fillOval(this.point.x, this.point.y, innerWidth, innerHeight);
 	}
 }

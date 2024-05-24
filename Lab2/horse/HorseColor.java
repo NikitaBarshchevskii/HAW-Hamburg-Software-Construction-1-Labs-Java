@@ -3,14 +3,18 @@ package horse;
 import java.awt.Color;
 
 public enum HorseColor {
+	
     BROWN(new Color(139, 69, 19)),
     BLACK(Color.BLACK),
     WHITE(Color.WHITE),
     GRAY(Color.GRAY),
-    CHESTNUT(new Color(147, 115, 42)),
+    KHAKI(new Color(147, 115, 42)),
     PURPLE(new Color(72, 43, 147)),
-    PINK(new Color(255, 192, 203)),
-    BLUE(Color.BLUE);
+    PINK(Color.pink),
+    BLUE(Color.BLUE),
+    GREEN(Color.GREEN),
+	RED(Color.RED),
+	YELLOW(Color.YELLOW);
 
     private Color color;
 

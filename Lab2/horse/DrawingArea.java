@@ -15,7 +15,7 @@ public class DrawingArea extends JPanel {
 		//Horse myHorse = new Horse(3 * 120, 3 * 50, 650, 350);
 		//myHorse.drawAt();
 
-		Scene myScene = new Scene(10);
+		Scene myScene = new Scene(75);
 		myScene.draw();
 	}
 }

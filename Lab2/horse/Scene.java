@@ -11,25 +11,28 @@ public class Scene {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int screenWidth = screenSize.width;
         int screenHeight = screenSize.height;
+        
         for (int i = 0; i < numberOfHorses; i++) {
             Horse newHorse;
             do {
                 int x = RandomNumber.between(100, screenWidth - 150);
                 int y = RandomNumber.between(100, screenHeight - 100);
+                Point newPoint = new Point(x, y);
                 HorseColor randomColor = HorseColor.values()[RandomNumber.between(0, HorseColor.values().length - 1)];
-                newHorse = new Horse(120, 50, x, y, randomColor.getColor());
+                newHorse = new Horse(60, 25, newPoint, randomColor.getColor());
             } while (doesIntersect(newHorse));
             horses.add(newHorse);
         }
     }
 
-    private boolean doesIntersect(Horse newHorse) {
+    public boolean doesIntersect(Horse newHorse) {
+    	boolean flag = false;
         for (Horse horse : horses) {
             if (!horse.doesNotIntersect(newHorse, 0)) {
-                return true;
+            	flag = true;
             }
         }
-        return false;
+        return flag;
     }
 
     public void draw() {
