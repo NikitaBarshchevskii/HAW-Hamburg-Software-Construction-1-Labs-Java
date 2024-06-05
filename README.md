@@ -34,7 +34,7 @@ The following image was created using Java graphics tools:
 ### What was Done:
 - Identified aggregates and composites, providing comments for each object-property.
 - Created a `Scene` class to aggregate multiple domain instances.
-- Utilized an ArrayList for multiple associations such as `dogs`.
+- Utilized an ArrayList for multiple associations such as `horses`.
 
 ### Task 3: Interfaces
 ### What was Done:
