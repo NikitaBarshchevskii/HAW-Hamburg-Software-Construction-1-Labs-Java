@@ -59,3 +59,55 @@ The following image was created using Java graphics tools:
 
 ![изображение](https://github.com/NikitaBarshchevskii/HAW-Hamburg-Software-Construction-2-Labs-Java/assets/47278408/0f20d29e-9ee6-4265-845a-1a608fc67d55)
 </details>
+
+## Lab 3
+<details><summary>Description</summary>
+  
+### Task 1: Vary Your Domain Objects
+
+### Objective: Introduce visual variations for your domain objects, such as different colors, sizes, and shapes.
+### Implementation:
+- Used interfaces and inheritance hierarchies to manage variations.
+- Introduced new methods to support visual variations specific to the animal, such as poses, clothing, and accessories.
+- Ensured unique variations distinct from those used by other groups.
+- Updated the UML class diagram to reflect these changes.
+### Results:
+- Depicted multiple objects with various visual attributes.
+- Stored these objects in an ArrayList within the Scene class, each positioned differently.
+
+### Task 2: Graphical User Interface for Controlling Variations
+
+### Objective: Develop a GUI to control the variations of the domain objects.
+### Implementation:
+- Added a panel with buttons for modifying object depictions, employing other GUI components like sliders or input fields as needed.
+- Utilized JLabel to provide labels near GUI elements for better user experience.
+- Sketched the GUI design and updated the UML diagram accordingly.
+- Enhanced the DrawingTool class (or its subclass extending JFrame) to include these GUI elements.
+- Introduced new methods to initialize the GUI elements and override actionPerformed(ActionEvent e) for handling actions (see Task 3).
+### Results:
+- Created a responsive GUI that allows users to interactively control the visual attributes of the domain objects.
+
+### Task 3: GUI in Action
+
+### Objective: 
+- Implement the functionality to bring the GUI to life.
+### Implementation:
+- Extended the actionPerformed(ActionEvent e) method in DrawingTool to handle GUI actions.
+- Used setters of domain classes to modify object depictions based on user actions.
+- Made the Scene class the entry point for all visual changes, ensuring it has the necessary properties and methods (getters and setters).
+- Implemented methods to update the screen when the user interacts with the GUI, ensuring the graphics are refreshed appropriately.
+- Example actions included methods like setHouses() and switchOnLights(), which modify the scene based on user input.
+
+### Results:
+- Achieved a fully functional GUI where user interactions dynamically alter the visual representation of domain objects.
+</details>
+
+<details><summary>Results</summary>
+The following images were created using Java graphics tools:
+![изображение](https://github.com/NikitaBarshchevskii/HAW-Hamburg-Software-Construction-2-Labs-Java/assets/47278408/cf918481-db2c-4d07-90ad-0299ea85d1e2)
+
+  The following image was created using Java graphics tools:
+
+![изображение](https://github.com/NikitaBarshchevskii/HAW-Hamburg-Software-Construction-2-Labs-Java/assets/47278408/b9cdcaba-1313-4d8f-aba0-8934b7e525b7)
+
+</details>
