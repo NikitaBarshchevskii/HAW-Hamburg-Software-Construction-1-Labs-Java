@@ -10,6 +10,7 @@ public class TestDrawingTool {
 	private JPanel buttonPanel;
 	private DrawingArea drawingArea;
 	private ArrayList<Integer> sizeCoef;
+	private ArrayList<HorseColor> colorCoef;
 
 	public TestDrawingTool(String title) {
 		applicationFrame = new JFrame(title);
@@ -18,6 +19,7 @@ public class TestDrawingTool {
 		applicationFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		sizeCoef = new ArrayList<>();
+		colorCoef = new ArrayList<>();
 
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
@@ -26,20 +28,22 @@ public class TestDrawingTool {
 		createColorPanel(buttonPanel);
 		createRefreshButton();
 
-		drawingArea = new DrawingArea();
-		
+		drawingArea = new DrawingArea(sizeCoef, colorCoef);
+
 		createSplitPane(screenSize);
 
 		applicationFrame.setVisible(true);
 	}
-	
+
 	private void createSizePanel(JPanel buttonPanel) {
 		JPanel sizePanel = new JPanel();
 		sizePanel.setLayout(new BoxLayout(sizePanel, BoxLayout.Y_AXIS));
 		sizePanel.setBorder(BorderFactory.createTitledBorder("Sizes"));
 		for (int i = 1; i <= 5; i++) {
 			JCheckBox sizeOption = new JCheckBox("Size " + i);
+			sizeOption.setSelected(true); // Check the checkbox by default
 			final int sizeCoefficient = i;
+			sizeCoef.add(sizeCoefficient); // Add the size coefficient to sizeCoef
 			sizeOption.addItemListener(e -> {
 				if (e.getStateChange() == ItemEvent.SELECTED) {
 					sizeCoef.add(sizeCoefficient);
@@ -50,29 +54,41 @@ public class TestDrawingTool {
 			sizePanel.add(sizeOption);
 		}
 		buttonPanel.add(sizePanel);
+		System.out.println("Size coefficients: " + sizeCoef);
+		System.out.println("Color coefficients: " + colorCoef);
 	}
-	
+
 	private void createColorPanel(JPanel buttonPanel) {
 		JPanel colorPanel = new JPanel();
 		colorPanel.setLayout(new BoxLayout(colorPanel, BoxLayout.Y_AXIS));
 		colorPanel.setBorder(BorderFactory.createTitledBorder("Colors"));
 		for (HorseColor horseColor : HorseColor.values()) {
 			JCheckBox colorOption = new JCheckBox(horseColor.name());
+			colorOption.setSelected(true);
 			colorOption.setBackground(horseColor.getColor());
+			colorCoef.add(horseColor);
 			if (isDark(horseColor.getColor())) {
 				colorOption.setForeground(Color.WHITE);
 			}
+			colorOption.addItemListener(e -> {
+				if (e.getStateChange() == ItemEvent.SELECTED) {
+					colorCoef.add(horseColor);
+				} else {
+					colorCoef.remove(horseColor);
+				}
+			});
 			colorPanel.add(colorOption);
 		}
 		buttonPanel.add(colorPanel);
+		System.out.println("Color coefficients: " + colorCoef);
 	}
-	
+
 	private void createRefreshButton() {
 		JButton refreshButton = new JButton("Refresh");
-		refreshButton.addActionListener(e -> drawingArea.refresh());
+		refreshButton.addActionListener(e -> drawingArea.refresh(sizeCoef, colorCoef));
 		buttonPanel.add(refreshButton, BorderLayout.CENTER);
 	}
-	
+
 	private void createSplitPane(Dimension screenSize) {
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, drawingArea, buttonPanel);
 		splitPane.setOneTouchExpandable(true);
