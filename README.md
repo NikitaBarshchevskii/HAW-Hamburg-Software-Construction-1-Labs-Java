@@ -103,12 +103,11 @@ The following image was created using Java graphics tools:
 </details>
 
 <details><summary>Results</summary>
+
+  ![изображение](https://github.com/NikitaBarshchevskii/HAW-Hamburg-Software-Construction-2-Labs-Java/assets/47278408/b9cdcaba-1313-4d8f-aba0-8934b7e525b7)
+
 The following images were created using Java graphics tools:
   
 ![изображение](https://github.com/NikitaBarshchevskii/HAW-Hamburg-Software-Construction-2-Labs-Java/assets/47278408/cf918481-db2c-4d07-90ad-0299ea85d1e2)
-
-  The following image was created using Java graphics tools:
-
-![изображение](https://github.com/NikitaBarshchevskii/HAW-Hamburg-Software-Construction-2-Labs-Java/assets/47278408/b9cdcaba-1313-4d8f-aba0-8934b7e525b7)
 
 </details>
