@@ -23,7 +23,8 @@ public class Scene {
 			do {
 				int x = RandomNumber.between(100, (int)(screenWidth * 0.8));
 				int y = RandomNumber.between(100, (int)(screenHeight * 0.85));
-				sizeCoefficient = sizeCoef.get(random.nextInt(sizeCoef.size()));				Point newPoint = new Point(x, y);
+				sizeCoefficient = sizeCoef.get(random.nextInt(sizeCoef.size()));
+				Point newPoint = new Point(x, y);
 				HorseColor randomColor = colorCoef.get(random.nextInt(colorCoef.size())); // Select a random color from colorCoef
 				newHorse = new Horse(30 * sizeCoefficient, (int) (12.5 * sizeCoefficient), newPoint,
 						randomColor.getColor());
